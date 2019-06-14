@@ -1,27 +1,5 @@
-
-
-
-
-
-
 export class MessyFile {
-
-
-
-
-    messy = {
-        test: "",
-
-
-
-
-    };
-
-
-
-
-
+  messy = {
+    test: ""
+  };
 }
-
-
-
