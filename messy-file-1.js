@@ -1,11 +1,7 @@
-export class MessyFileOne {
+/** @format */
 
+export class MessyFileOne {
   messy = {
     test: ""
-
-
   };
-
-
-
 }
