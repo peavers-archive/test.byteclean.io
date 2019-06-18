@@ -1,10 +1,10 @@
 export class MessyFileOne {
 
   messy = {
-    test: ""
+    test:''
 
 
-  };
+  }
 
 
 
