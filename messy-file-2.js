@@ -1,13 +1,3 @@
 export class MessyFileTwo {
-  messy = {
-
-
-
-
-
-
-
-
-
-  };
+  messy = {};
 }
