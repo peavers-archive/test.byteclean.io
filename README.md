@@ -1,0 +1,1 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c3b5e3317ce496c834c5e44fb2547f0)](example)
