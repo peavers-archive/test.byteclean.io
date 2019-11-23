@@ -1,4 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c3b5e3317ce496c834c5e44fb2547f0)](example)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c3b5e3317ce496c834c5e44fb2547f0)](example)
 __This module has been deprecated. More information at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5__
 
 __Here are some things you can use instead:__
