@@ -339,6 +339,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 | **Critical** | [![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-critical?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-critical?logo=Postwoman)](https://postwoman.io)` |
 | **Custom** | [![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-blueviolet?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-blueviolet?logo=Postwoman)](https://postwoman.io)` |
 | Customize | [![Postwoman](https://img.shields.io/badge/your_text-Postwoman-hex_color_code?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/your_text-Postwoman-hex_color_code?logo=Postwoman)](https://postwoman.io)` |
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c3b5e3317ce496c834c5e44fb2547f0)](example)
 
 <div align="center">
   <br>
