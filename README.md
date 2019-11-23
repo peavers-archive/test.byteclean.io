@@ -1,174 +1,348 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7c3b5e3317ce496c834c5e44fb2547f0)](example)
-__This module has been deprecated. More information at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5__
+<div align="center">
+  <a href="https://postwoman.io"><img src="static/logo.png" alt="Postwoman.io logo" height="160"></a>
+  <br>
+  <br>
+  <p>
+    API request builder - A free, fast, and beautiful alternative to Postman
+  </p>
+  <p>
+     Helps you create your requests faster, saving you precious time on your development - <a href="https://postwoman.launchaco.com">Subscribe</a>
+  </p>
+  <p>
 
-__Here are some things you can use instead:__
+  [![Travis Build Status](https://img.shields.io/travis/com/liyasthomas/postwoman?logo=Travis)](https://travis-ci.com/liyasthomas/postwoman) [![GitHub release](https://img.shields.io/github/release/liyasthomas/postwoman/all?logo=GitHub)](https://github.com/liyasthomas/postwoman/releases/latest) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fpostwoman.io&logo=Postwoman)](https://postwoman.io) [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?style=flat)](CONTRIBUTING.md) [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors) [![Financial Contributors on Open Collective](https://img.shields.io/opencollective/all/postwoman?logo=Open-Collective&label=financial+contributors)](https://opencollective.com/postwoman) [![Donate on PayPal](https://img.shields.io/badge/support-PayPal-blue?logo=PayPal)](https://www.paypal.me/liyascthomas) [![Chat on Telegram](https://img.shields.io/badge/chat-Telegram-blueviolet?logo=Telegram)](https://t.me/postwoman_app) [![Chat on Discord](https://img.shields.io/badge/chat-Discord-violet?logo=discord)](https://discord.gg/GAMWxmR) [![Tweet](https://img.shields.io/twitter/url?url=https%3A%2F%2Fpostwoman.io%2F)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fpostwoman.io&text=%F0%9F%91%BD%20Postwoman%20%E2%80%A2%20API%20request%20builder%20-%20Helps%20you%20create%20your%20requests%20faster%2C%20saving%20you%20precious%20time%20on%20your%20development&original_referer=https%3A%2F%2Ftwitter.com%2Fshare%3Ftext%3D%25F0%259F%2591%25BD%2520Postwoman%2520%25E2%2580%25A2%2520API%2520request%2520builder%2520-%2520Helps%2520you%2520create%2520your%2520requests%2520faster%2C%2520saving%2520you%2520precious%2520time%2520on%2520your%2520development%26url%3Dhttps%3A%2F%2Fpostwoman.io%26hashtags%3Dpostwoman%26via%3Dliyasthomas&via=liyasthomas&hashtags=postwoman)
 
-* `gutil.File` => https://www.npmjs.com/package/vinyl
-* `gutil.replaceExtension` => The `.extname` property on vinyl objects or https://www.npmjs.com/package/replace-ext
-* `gutil.colors` => https://www.npmjs.com/package/ansi-colors
-* `gutil.date` => https://www.npmjs.com/package/date-format
-* `gutil.log` => https://www.npmjs.com/package/fancy-log
-* `gutil.template` => https://www.npmjs.com/package/lodash.template
-* `gutil.env` => https://www.npmjs.com/package/minimist
-* `gutil.beep` => https://www.npmjs.com/package/beeper
-* `gutil.noop` => https://www.npmjs.com/package/through2
-* `gutil.isStream` => Use the `.isStream()` method on vinyl objects
-* `gutil.isBuffer` => Use the `.isBuffer()` method on vinyl objects
-* `gutil.isNull` => Use the `.isNull()` method on vinyl objects
-* `gutil.linefeed` => Use the string `'\n'` in your code
-* `gutil.combine` => https://www.npmjs.com/package/multipipe
-* `gutil.buffer` => https://www.npmjs.com/package/list-stream
-* `gutil.PluginError` => https://www.npmjs.com/package/plugin-error
+  </p>
+  <p>
+    <sub>Built with ❤︎ by
+      <a href="https://github.com/liyasthomas">liyasthomas</a> and
+      <a href="https://github.com/liyasthomas/postwoman/graphs/contributors">contributors</a>
+    </sub>
+  </p>
+</div>
 
-# gulp-util [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
+---
 
-## Information
+**Read: _[Story behind Postwoman](https://dev.to/liyasthomas/i-created-postwoman-an-online-open-source-api-request-builder-41md), [Postwoman v1.0](https://dev.to/liyasthomas/postwoman-v1-0-a-free-fast-beautiful-alternative-to-postman-mn0)_**
 
+**Chat: _[Telegram](https://t.me/postwoman_app), [Discord](https://discord.gg/GAMWxmR)_**
+
+**Donate: _[PayPal](https://www.paypal.me/liyascthomas), [Open Collective](https://opencollective.com/postwoman), [Patreon](https://www.patreon.com/liyasthomas)_**
+
+<div align="center">
+  <br>
+  <img src="static/images/screenshot1.png" alt="Screenshot1" width="100%">
+  <img src="static/images/screenshot2.png" alt="Screenshot2" width="100%">
+  <br>
+</div>
+
+### Features ✨
+
+❤️ **Lightweight**: Crafted with minimalistic UI design. Simple design is the best design.
+
+ - Faster, lighter, cleaner, minimal & responsive
+
+⚡️ **Fast**: Send requests and get/copy responses in real-time! Fast software is the best software.
+
+**Methods:**
+ - `GET` - Retrieve information about the REST API resource
+ - `HEAD` - Retrieve response headers identical to those of a GET request, but without the response body.
+ - `POST` - Create a REST API resource
+ - `PUT` - Update a REST API resource
+ - `DELETE` - Delete a REST API resource or related component
+ - `OPTIONS` - Describe the communication options for the target resource
+ - `PATCH` - Apply partial modifications to a REST API resource
+
+_History entries are synced with local session storage_
+
+🌈 **Make it yours**: Customizable combinations for background, foreground and accent colors: because customization === freedom. [Customize now ✨](https://postwoman.io/settings).
+
+**Customizations:**
+ - Choose theme: Kinda Dark (default), Clearly White, Just Black and System theme
+ - Choose accent color: Green (default), Yellow, Pink, Red, Purple, Orange, Cyan and Blue
+ - Toggle multi-colored frames
+
+_Customized themes are also synced with local session storage_
+
+🔥 **PWA**: Install as a [PWA](https://developers.google.com/web/progressive-web-apps) (100/100 Lighthouse score) on your device.
+
+**Features:**
+ - Instant loading with [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers)
+ - Offline support
+ - Low RAM/memory and CPU usage
+ - [Add to Home Screen](https://developers.google.com/web/fundamentals/app-install-banners) (button in footer)
+ - [Desktop PWA](https://developers.google.com/web/progressive-web-apps/desktop) support (button in footer)
+ - ([full features](https://developers.google.com/web/progressive-web-apps))
+
+🚀 **Request**: Retrieve data from a URL without having to do a full page refresh.
+
+ - Choose `method`
+ - Enter `URL`
+ - Enter `Path`
+
+**Features:**
+ - Copy/share public "Share URL"
+ - Generate request code for JavaScript XHR, Fetch and cURL
+ - Copy generated request code to clipboard
+ - Import cURL
+ - Label requests
+
+🔌 **WebSocket**: Establish full-duplex communication channels over a single TCP connection.
+
+ - Send and receive data
+
+🌍 **GraphQL**: GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.
+
+ - Set endpoint and get schemas
+ - Multi-column docs
+
+🔐 **Authentication**: Allows to identify the end user.
+
+**Types:**
+ - None
+ - Basic authentication using username and password
+ - Token based authentication
+
+📢 **Headers**: Describes the format the body of your request is being sent as.
+
+ - Add or remove Header list
+
+📫 **Parameters**: Use request parameters to set varying parts in simulated requests.
+
+📃 **Request Body**: Used to send and receive data via the REST API.
+
+**Options:**
+ - Set Content Type
+ - Add or remove Parameter list
+ - Toggle between key-value and RAW input Parameter list
+
+👋 **Responses**: Contains the status line, headers and the message/response body.
+
+ - Copy response to clipboard
+ - Download response to a local file
+ - View preview for HTML responses
+
+_HTML responses have "Preview HTML" feature_
+
+⏰ **History**: Request entries are synced with local session storage to reuse with a single click.
+
+**Fields:**
+ - Label
+ - Timestamp
+ - Method
+ - Status code
+ - URL
+ - Path
+
+_History entries can be sorted by any fields_
+
+_Histories can be deleted one-by-one or all together_
+
+📁 **Collections**: Keep your API requests organized with collections and folders. Reuse them with a single click.
+
+**Options:**
+ - Create infinite collections, folders and requests
+ - Edit, delete, move, export, import and replace
+
+_Export, import and replace collections with JSON files_
+
+_Collections are synced with local session storage_
+
+🌐 **Proxy**: Enable Proxy Mode from Settings to access blocked APIs.
+
+**Features:**
+ - Hide your IP address
+ - Fixes [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (Cross Origin Resource Sharing) issues
+ - Access APIs served in non-HTTPS (`http://`, `localhost`, etc.)
+
+_Proxy is hosted by ApolloTV - [Privacy policy](https://apollotv.xyz/legal)_
+
+📜 **Pre-Request Scripts**: Snippets of code associated with a request that are executed before the request is sent.
+
+**Use-cases:**
+ - Including the timestamp in the request headers
+ - Sending a random alphanumeric string in the URL parameters
+
+_Requests with Pre-Request Scripts are indicated in History entries_
+
+⌨️ **Keyboard Shortcuts**: Optimized for efficiency.
+
+**Shortcuts:**
+ - Send Request <kbd>Ctrl</kbd> + <kbd>G</kbd>
+ - Save to Collections <kbd>Ctrl</kbd> + <kbd>S</kbd>
+ - Copy Request Link <kbd>Ctrl</kbd> + <kbd>K</kbd>
+ - Reset Request <kbd>Ctrl</kbd> + <kbd>L</kbd>
+
+**To find out more, please check out [Postwoman Wiki](https://github.com/liyasthomas/postwoman/wiki).**
+
+## Demo 🚀 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fpostwoman.io&logo=Postwoman)](https://postwoman.io)
+
+[https://postwoman.io](https://postwoman.io)
+
+## Usage 💡
+
+1. Specify your request method
+2. Type in your API URL
+3. Add API path
+4. Send request
+5. Get response!
+
+You're done!
+
+## Built with 🔧
+
+* [Chromium](https://github.com/chromium/chromium) - Thanks for being so fast!
+* HTML - For the web framework
+* CSS - For styling components
+* JavaScript - For magic!
+* [Vue](https://vuejs.org/) - To add to the JavaScript magic!
+* [Nuxt](https://nuxtjs.org/) - To add to the Vue magic!
+
+## Developing 👷
+
+1. [Clone this repo](https://help.github.com/en/articles/cloning-a-repository) with git.
+2. Install dependencies by running `npm install` within the directory that you cloned (probably `postwoman`).
+3. Start the development server with `npm run dev`.
+4. Open development site by going to [http://localhost:3000](http://localhost:3000) in your browser.
+
+#### Or, with docker-compose:
+
+1. [Clone this repo](https://help.github.com/en/articles/cloning-a-repository) with git.
+2. Run `docker-compose up`
+3. Open development site by going to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Docker 🐳 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/liyasthomas/postwoman?logo=Docker)](https://hub.docker.com/r/liyasthomas/postwoman)
+
+```bash
+#pull
+docker pull liyasthomas/postwoman
+
+#run
+docker run -p 3000:3000 liyasthomas/postwoman:latest
+
+#build
+docker build -t postwoman:latest
+```
+
+## Releasing 🏷️
+
+1. [Clone this repo](https://help.github.com/en/articles/cloning-a-repository) with git.
+2. Install dependencies by running `npm install` within the directory that you cloned (probably `postwoman`).
+3. Build the release files with `npm run build`.
+4. Find the built project in `./dist`.
+
+## Contributing 🍰
+
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our [CODE OF CONDUCT](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
+
+## Continuous Integration 💚 [![Travis Build Status](https://img.shields.io/travis/com/liyasthomas/postwoman?logo=Travis)](https://travis-ci.com/liyasthomas/postwoman)
+
+We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.com/liyasthomas/postwoman).
+
+## Versioning 🔖 [![GitHub release](https://img.shields.io/github/release/liyasthomas/postwoman/all?logo=GitHub)](https://github.com/liyasthomas/postwoman/releases/latest)
+
+This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/postwoman/releases).
+
+## Change log 📝
+
+See the [CHANGELOG](CHANGELOG.md) file for details.
+
+## Authors 🔮
+
+### Lead Developers
+
+* **[Liyas Thomas](https://github.com/liyasthomas)** - *Author*
+* **[Caneco](https://twitter.com/caneco)** - *Designer*
+
+### Testing and Debugging
+
+* ([contributors](https://github.com/liyasthomas/postwoman/graphs/contributors))
+
+### Collaborators <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
 <table>
-<tr> 
-<td>Package</td><td>gulp-util</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>Utility functions for gulp plugins</td>
-</tr>
-<tr>
-<td>Node Version</td>
-<td>>= 0.10</td>
-</tr>
+  <tr>
+    <td align="center"><a href="https://liyasthomas.web.app"><img src="https://avatars1.githubusercontent.com/u/10395817?v=4" width="100px;" alt="Liyas Thomas"/><br /><sub><b>Liyas Thomas</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=liyasthomas" title="Code">💻</a> <a href="#design-liyasthomas" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/NBTX"><img src="https://avatars3.githubusercontent.com/u/43181178?v=4" width="100px;" alt="John Harker"/><br /><sub><b>John Harker</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=NBTX" title="Code">💻</a> <a href="#design-NBTX" title="Design">🎨</a></td>
+    <td align="center"><a href="https://nicholaslaroux.com"><img src="https://avatars0.githubusercontent.com/u/1557529?v=4" width="100px;" alt="Nicholas La Roux"/><br /><sub><b>Nicholas La Roux</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=larouxn" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/yubathom"><img src="https://avatars3.githubusercontent.com/u/4117768?v=4" width="100px;" alt="Thomas Yuba"/><br /><sub><b>Thomas Yuba</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=yubathom" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.linkedin.com/in/nickpalenchar"><img src="https://avatars1.githubusercontent.com/u/7539781?v=4" width="100px;" alt="Nick Palenchar"/><br /><sub><b>Nick Palenchar</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=nickpalenchar" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.lumahealth.io/"><img src="https://avatars3.githubusercontent.com/u/8795767?v=4" width="100px;" alt="Terran Blake"/><br /><sub><b>Terran Blake</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=terranblake" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/AndrewBastin"><img src="https://avatars2.githubusercontent.com/u/9131943?v=4" width="100px;" alt="Andrew Bastin"/><br /><sub><b>Andrew Bastin</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=AndrewBastin" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/vlad0337187"><img src="https://avatars1.githubusercontent.com/u/12682937?v=4" width="100px;" alt="Vladislav"/><br /><sub><b>Vladislav</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=vlad0337187" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/izerozlu"><img src="https://avatars3.githubusercontent.com/u/17386157?v=4" width="100px;" alt="izerozlu"/><br /><sub><b>izerozlu</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=izerozlu" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/JacobAnavisca"><img src="https://avatars2.githubusercontent.com/u/21232366?v=4" width="100px;" alt="Jacob Anavisca"/><br /><sub><b>Jacob Anavisca</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=JacobAnavisca" title="Code">💻</a></td>
+    <td align="center"><a href="http://nityanandagohain.github.io"><img src="https://avatars3.githubusercontent.com/u/26831659?v=4" width="100px;" alt="Nityananda Gohain"/><br /><sub><b>Nityananda Gohain</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=nityanandagohain" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/hosseinnedaee"><img src="https://avatars2.githubusercontent.com/u/42691357?v=4" width="100px;" alt="Hossein Nedaee"/><br /><sub><b>Hossein Nedaee</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=hosseinnedaee" title="Code">💻</a></td>
+    <td align="center"><a href="https://ghuser.io/jamesgeorge007"><img src="https://avatars2.githubusercontent.com/u/25279263?v=4" width="100px;" alt="James George"/><br /><sub><b>James George</b></sub></a><br /><a href="https://github.com/liyasthomas/postwoman/commits?author=jamesgeorge007" title="Code">💻</a></td>
+  </tr>
 </table>
 
-## Usage
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-```javascript
-var gutil = require('gulp-util');
+See the list of [contributors](https://github.com/liyasthomas/postwoman/graphs/contributors) who participated in this project.
 
-gutil.log('stuff happened', 'Really it did', gutil.colors.magenta('123'));
+### Thanks
 
-gutil.replaceExtension('file.coffee', '.js'); // file.js
+* [dev.to 👩‍💻👨‍💻](https://dev.to)
 
-var opt = {
-  name: 'todd',
-  file: someGulpFile
-};
-gutil.template('test <%= name %> <%= file.path %>', opt) // test todd /js/hi.js
-```
+### Code Contributors
 
-### log(msg...)
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 
-Logs stuff. Already prefixed with [gulp] and all that. If you pass in multiple arguments it will join them by a space.
+<a href="https://github.com/liyasthomas/postwoman/graphs/contributors"><img src="https://opencollective.com/postwoman/contributors.svg?width=890&button=false" /></a>
 
-The default gulp coloring using gutil.colors.<color>:
-```
-values (files, module names, etc.) = cyan
-numbers (times, counts, etc) = magenta
-```
+### Financial Contributors
 
-### colors
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/postwoman/contribute)]
 
-Is an instance of [chalk](https://github.com/sindresorhus/chalk).
+#### Individuals
 
-### replaceExtension(path, newExtension)
+<a href="https://opencollective.com/postwoman"><img src="https://opencollective.com/postwoman/individuals.svg"></a>
 
-Replaces a file extension in a path. Returns the new path.
+#### Organizations
 
-### isStream(obj)
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/postwoman/contribute)]
 
-Returns true or false if an object is a stream.
+<a href="https://opencollective.com/postwoman/organization/0/website"><img src="https://opencollective.com/postwoman/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/1/website"><img src="https://opencollective.com/postwoman/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/2/website"><img src="https://opencollective.com/postwoman/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/3/website"><img src="https://opencollective.com/postwoman/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/4/website"><img src="https://opencollective.com/postwoman/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/5/website"><img src="https://opencollective.com/postwoman/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/6/website"><img src="https://opencollective.com/postwoman/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/7/website"><img src="https://opencollective.com/postwoman/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/8/website"><img src="https://opencollective.com/postwoman/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/postwoman/organization/9/website"><img src="https://opencollective.com/postwoman/organization/9/avatar.svg"></a>
 
-### isBuffer(obj)
+## License 📄
 
-Returns true or false if an object is a Buffer.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
 
-### template(string[, data])
+## Acknowledgements 🙏
 
-This is a lodash.template function wrapper. You must pass in a valid gulp file object so it is available to the user or it will error. You can not configure any of the delimiters. Look at the [lodash docs](http://lodash.com/docs#template) for more info.
+* Hat tip to anyone whose code was used
+* Inspirations:
+  * [Dribbble](https://dribbble.com)
 
-## new File(obj)
+## Badges
 
-This is just [vinyl](https://github.com/wearefractal/vinyl)
+| Status | Preview | Markdown code (copy & paste into `readme.md`) |
+| ----------- | ----------- | ----------- |
+| **Default** | [![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-50fa7b?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-50fa7b?logo=Postwoman)](https://postwoman.io)` |
+| **Success** | [![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-success?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-success?logo=Postwoman)](https://postwoman.io)` |
+| **Critical** | [![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-critical?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-critical?logo=Postwoman)](https://postwoman.io)` |
+| **Custom** | [![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-blueviolet?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/Tested_on-Postwoman-blueviolet?logo=Postwoman)](https://postwoman.io)` |
+| Customize | [![Postwoman](https://img.shields.io/badge/your_text-Postwoman-hex_color_code?logo=Postwoman)](https://postwoman.io) | `[![Postwoman](https://img.shields.io/badge/your_text-Postwoman-hex_color_code?logo=Postwoman)](https://postwoman.io)` |
 
-```javascript
-var file = new gutil.File({
-  base: path.join(__dirname, './fixtures/'),
-  cwd: __dirname,
-  path: path.join(__dirname, './fixtures/test.coffee')
-});
-```
-
-## noop()
-
-Returns a stream that does nothing but pass data straight through.
-
-```javascript
-// gulp should be called like this :
-// $ gulp --type production
-gulp.task('scripts', function() {
-  gulp.src('src/**/*.js')
-    .pipe(concat('script.js'))
-    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
-    .pipe(gulp.dest('dist/'));
-});
-```
-
-## buffer(cb)
-
-This is similar to es.wait but instead of buffering text into one string it buffers anything into an array (so very useful for file objects).
-
-Returns a stream that can be piped to.
-
-The stream will emit one data event after the stream piped to it has ended. The data will be the same array passed to the callback.
-
-Callback is optional and receives two arguments: error and data
-
-```javascript
-gulp.src('stuff/*.js')
-  .pipe(gutil.buffer(function(err, files) {
-  
-  }));
-```
-
-## new PluginError(pluginName, message[, options])
-
-- pluginName should be the module name of your plugin
-- message can be a string or an existing error
-- By default the stack will not be shown. Set `options.showStack` to true if you think the stack is important for your error.
-- If you pass an error in as the message the stack will be pulled from that, otherwise one will be created.
-- Note that if you pass in a custom stack string you need to include the message along with that.
-- Error properties will be included in `err.toString()`. Can be omitted by including `{showProperties: false}` in the options.
-
-These are all acceptable forms of instantiation:
-
-```javascript
-var err = new gutil.PluginError('test', {
-  message: 'something broke'
-});
-
-var err = new gutil.PluginError({
-  plugin: 'test',
-  message: 'something broke'
-});
-
-var err = new gutil.PluginError('test', 'something broke');
-
-var err = new gutil.PluginError('test', 'something broke', {showStack: true});
-
-var existingError = new Error('OMG');
-var err = new gutil.PluginError('test', existingError, {showStack: true});
-```
-
-## gulp-util for enterprise
-
-Available as part of the Tidelift Subscription
-
-The maintainers of gulp-util and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-gulp-util?utm_source=npm-gulp-util&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
-
-
-[npm-url]: https://www.npmjs.com/package/gulp-util
-[npm-image]: https://badge.fury.io/js/gulp-util.svg
-[travis-url]: https://travis-ci.org/gulpjs/gulp-util
-[travis-image]: https://img.shields.io/travis/gulpjs/gulp-util.svg?branch=master
-[coveralls-url]: https://coveralls.io/r/gulpjs/gulp-util
-[coveralls-image]: https://img.shields.io/coveralls/gulpjs/gulp-util.svg
-[depstat-url]: https://david-dm.org/gulpjs/gulp-util
-[depstat-image]: https://david-dm.org/gulpjs/gulp-util.svg
+<div align="center">
+  <br>
+  <a href="https://postwoman.io"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Postwoman.io" width="200"></a>
+  <br>
+  <h3>Happy Coding ❤︎</h3>
+</div>
