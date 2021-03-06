@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6058054-5581-409a-96f0-035bb8a9d68c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/6.8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-11.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-12.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-13.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-14.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/messy-file-9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+    <list default="true" id="d6058054-5581-409a-96f0-035bb8a9d68c" name="Default Changelist" comment="feature: switch to java for diffrent project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/byteclean/BytecleanApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/byteclean/BytecleanApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +49,26 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BytecleanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="byteclean.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.byteclean.BytecleanApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,8 +78,16 @@
       <option name="presentableId" value="Default" />
       <updated>1615027993158</updated>
       <workItem from="1615027994269" duration="28000" />
-      <workItem from="1615028119499" duration="33000" />
+      <workItem from="1615028119499" duration="1554000" />
     </task>
+    <task id="LOCAL-00001" summary="feature: switch to java for diffrent project">
+      <created>1615028191985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615028191985</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feature: switch to java for diffrent project" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: switch to java for diffrent project" />
   </component>
 </project>

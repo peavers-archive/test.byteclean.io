@@ -1,5 +1,6 @@
 package com.example.byteclean;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -7,7 +8,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 class BytecleanApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void testOne() {
+	}
+
+	@Test
+	void testTwo() {
+	}
+
+	@Disabled
+	void testThree() {
 	}
 
 }
